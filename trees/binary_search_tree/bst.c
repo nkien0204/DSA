@@ -16,12 +16,37 @@ void Insert (Node * root, int data) {
   } else {
     if (data < (*root)->data) {
       Insert (&(*root)->left, data);
-    } else if (data > (*root)->data) {
+    } else if (data >= (*root)->data) {
       Insert (&(*root)->right, data);
-    } else {
-      printf ("INSERT LOG: data is existed in the tree.\n");
-      return;
     }
+  }
+}
+
+bool Search (Node root, int data) {
+  if (root == NULL) {
+    return false;
+  }
+  if (root->data == data) {
+    return true;
+  } else if (data < root->data) {
+    Search (root->left, data);
+  } else if (data > root->data) {
+    Search (root->right, data);
+  }
+}
+
+void Delete (Node * root, int data) {
+  if (*root == NULL) {
+    printf ("Nothing to delete\n");
+    return;
+  }
+  if ((*root)->data == data) {
+    *root = NULL;
+    return;
+  } else if (data < (*root)->data) {
+    Delete (&(*root)->left, data);
+  } else if (data > (*root)->data) {
+    Delete (&(*root)->right, data);
   }
 }
 

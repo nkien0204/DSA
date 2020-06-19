@@ -18,7 +18,7 @@ int HashFunc (char * key) {
 }
 
 void Insert (char * key, char * data) {
-  if (Search (key, &data)) {
+  if (Search (key)) {
     printf ("Key already in use, try another one.\n");
     return;
   }
@@ -32,7 +32,7 @@ void Insert (char * key, char * data) {
   free(item);
 }
 
-bool Search (char * key, char ** data) {
+bool Search (char * key) {
   int index = HashFunc (key);
   if (list[index].key == NULL) {
     return false;
@@ -41,7 +41,6 @@ bool Search (char * key, char ** data) {
     index++;
   }
   if (strcmp (list[index].key, key) == 0) {
-    *data = list[index].data;
     return true;
   } else {
     return false;

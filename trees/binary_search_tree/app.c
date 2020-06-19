@@ -10,9 +10,11 @@ int main () {
   Insert (&root, 42);
   PreTraverse(root);
   printf ("\n");
-  InTraverse(root);
+  Delete (&root, 35);
+  PreTraverse(root);
+  Insert (&root, 40);
   printf ("\n");
-  PostTraverse(root);
+  PreTraverse(root);
   printf ("\n");
   return 0;
 }
