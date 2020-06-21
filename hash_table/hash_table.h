@@ -15,6 +15,6 @@ DataItem list[SIZE];
 DataItem * InitItem ();
 int HashFunc (char * key);
 void Insert (char * key, char * data);
-void Delete (char * key, char * data);
-bool Search (char * key);
+void Delete (char * key);
+bool Search (char * key, char ** data);
 int Len(char * key);

@@ -15,4 +15,3 @@ void Delete (Node * root, int data);
 void PreTraverse (Node root);
 void InTraverse (Node root);
 void PostTraverse (Node root);
-// void Search (Node root);
