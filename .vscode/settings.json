@@ -1,6 +1,12 @@
 {
   "files.associations": {
+<<<<<<< HEAD
     "ostream": "cpp",
     "random": "cpp"
+=======
+    "array": "c",
+    "string": "c",
+    "string_view": "c"
+>>>>>>> 1b21e970b30d95a222433fb43f075c5486c9a7f8
   }
 }

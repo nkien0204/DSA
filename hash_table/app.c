@@ -6,11 +6,16 @@ int main () {
   Insert ("catdoga", "0327274166a");
   Insert ("catdogb", "0327274166b");
   Insert ("catdogc", "0327274166c");
+  // if (!Search ("catdogb", &buff)) {
+  //   printf ("Key not found.\n");
+  // } else {
+  //   printf ("data: %s\n", buff);
+  // }
+  // Delete ("catdogb");
   if (!Search ("catdogb", &buff)) {
     printf ("Key not found.\n");
   } else {
     printf ("data: %s\n", buff);
   }
-
   return 0;
 }
